@@ -2,7 +2,6 @@
 .htaccess
 node_modules
 bower_components
-data
 deploy.sh
 npm-debug.log
 TODO.md
