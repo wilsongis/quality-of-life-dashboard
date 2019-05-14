@@ -10,3 +10,4 @@ yarn.lock
 dist
 public/data
 public/downloads/qol-data.zip
+*.code-workspace
