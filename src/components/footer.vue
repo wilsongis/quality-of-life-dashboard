@@ -9,7 +9,7 @@
             </p>
             
             <p class="text-muted">
-                Created by <a href="http://charmeck.org/mecklenburg/county/Pages/Default.aspx">Mecklenburg County</a>, the <a href="http://charmeck.org/city/charlotte/Pages/default.aspx">City of Charlotte</a>, and <a href="http://www.uncc.edu/">UNC Charlotte</a>
+                Used by the  <a href="http://apsugis.org">APSU GIS Center</a>, based on the work of <a href="http://charmeck.org/mecklenburg/county/Pages/Default.aspx">Mecklenburg County</a>, the <a href="http://charmeck.org/city/charlotte/Pages/default.aspx">City of Charlotte</a>, and <a href="http://www.uncc.edu/">UNC Charlotte</a>
                 with much &#9829; for the projects that make this site possible:
                 <br>
                 <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>,

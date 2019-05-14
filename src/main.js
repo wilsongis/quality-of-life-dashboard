@@ -48,7 +48,7 @@ import Tabs from './components/tabs.vue';
 import Selectgroup from './components/selectgroup.vue';
 import Intro from './components/intro.vue';
 import ieSVGFixes from './modules/ie-svg-bugs.js';
-import mapStyle from '../data/gl-style/positron-mecklenburg.json';
+import mapStyle from '../data/gl-style/positron-cmc.json';
 import './main.css';
 import './registerServiceWorker';
 
@@ -439,7 +439,7 @@ if (contactForm) {
             url: window.location.href,
             agent: navigator.userAgent,
             subject: 'Quality of Life Dashboard Feedback',
-            to: 'tobin.bradley@gmail.com',
+            to: 'wilsonm@apsu.edu',
             message: message.value
           }),
           {

@@ -113,6 +113,7 @@ export default {
         let _this = this;
         axios
           .get(
+          // TODO: Update Query for census tracks
             'https://mcmap.org/api/intersect_feature/v1/neighborhood_statistical_areas/neighborhoods',
             {
               params: {
@@ -150,6 +151,7 @@ export default {
         let _this = this;
         axios
           .get(
+          // TODO: Update Query zip codes
             'https://mcmap.org/api/intersect_feature/v1/zipcodes/neighborhoods',
             {
               params: {
@@ -194,6 +196,7 @@ export default {
       if (query.length > 4 && !isNumeric(query)) {
         let _this = this;
         axios
+        // TODO: Update Query create address search
           .get(`https://mcmap.org/api/search/v1/${query.toLowerCase()}`, {
             params: {
               limit: 5
@@ -236,6 +239,7 @@ export default {
       let _this = this;
       axios
         .get(
+        // TODO: Update Query for location search
           `https://mcmap.org/api/intersect_point/v1/neighborhoods/${lng},${lat}/4326`,
           {
             params: {
