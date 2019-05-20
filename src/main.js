@@ -48,7 +48,7 @@ import Tabs from './components/tabs.vue';
 import Selectgroup from './components/selectgroup.vue';
 import Intro from './components/intro.vue';
 import ieSVGFixes from './modules/ie-svg-bugs.js';
-import mapStyle from '../data/gl-style/positron-cmc.json';
+import mapStyle from '../data/gl-style/osm-liberty.json';
 import './main.css';
 import './registerServiceWorker';
 

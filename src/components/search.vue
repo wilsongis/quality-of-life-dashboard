@@ -75,10 +75,10 @@ export default {
         let query = _this.privateState.query.trim();
 
         _this.searchNeighborhood(query);
-        _this.searchAddress(query);
-        _this.searchZipcode(query);
-        _this.searchNSA(query);
-        _this.searchMetric(query);
+        //_this.searchAddress(query);
+        //_this.searchZipcode(query);
+        //_this.searchNSA(query);
+        //_this.searchMetric(query);
       }, 250);
       debounceSearch();
     },
