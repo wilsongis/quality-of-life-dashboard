@@ -1,3 +1,4 @@
+
 [submodule "data"]
 	path = data
-	url = https://github.com/wilsongis/mecklenburg-quality-of-life-data.git
+	url = https://github.com/wilsongis/cmc-quality-of-life-data.git
