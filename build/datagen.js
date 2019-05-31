@@ -92,6 +92,7 @@ function jsonTransform(jsonArray) {
 
 // loop through the variables
 _.each(dataConfig, function(m) {
+  console.log(m.metric)
   if (m.type === 'sum') {
     csv()
       .fromFile('data/metric/r' + m.metric + '.csv')
