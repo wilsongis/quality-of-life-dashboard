@@ -7,17 +7,30 @@
             </template>
         </template>
         <template v-else >
-            <span class="sidebar-title">Explore the Data</span>
-            <template v-for="category in filterCategories(privateState.data)">
-                <a class="mdl-navigation__link" v-on:click="changeFilter(category)" href="javascript:void(0)">{{category}}<svg class="mdl-color-text--blue-grey-400 icon icon-keyboard_arrow_right navright"><use xlink:href="#icon-keyboard_arrow_right"></use></svg></a>
-            </template>
-            <a class="mdl-navigation__link" href="http://charlottenc.gov/HNS/CE/CommunityInfo/Pages/QOL.aspx">About</a>
-            <a class="mdl-navigation__link" onclick="ga('send', 'event', 'download', 'metric zip file download')" href="downloads/qol-data.zip">Download Data</a>
-        </template>
+  <span class="sidebar-title">Explore the Data</span>
+  <template v-for="category in filterCategories(privateState.data)">
+    <a
+      class="mdl-navigation__link"
+      v-on:click="changeFilter(category)"
+      href="javascript:void(0)"
+    >{{category}}<svg class="mdl-color-text--blue-grey-400 icon icon-keyboard_arrow_right navright">
+        <use xlink:href="#icon-keyboard_arrow_right"></use>
+      </svg></a>
+  </template>
+  <a
+    class="mdl-navigation__link"
+    href="http://www.apsugis.org/census-viewer/"
+  >About</a>
+  <a
+    class="mdl-navigation__link"
+    onclick="ga('send', 'event', 'download', 'metric zip file download')"
+    href="downloads/qol-data.zip"
+  >Download Data</a>
+</template>
 
         <!--<div class="mdl-layout-spacer"></div>
         <div style="text-align: center">
-            <a class="mdl-navigation__link-bottom" href="http://qol.charmeck.org/">About</a> &bull; <a class="mdl-navigation__link-bottom" href="downloads/qol-data.zip">Download Data</a>
+            <a class="mdl-navigation__link-bottom" href=" http://www.apsugis.org/census-viewer/">About</a> &bull; <a class="mdl-navigation__link-bottom" href="downloads/qol-data.zip">Download Data</a>
         </div>-->
     </nav>
 </template>
@@ -29,10 +42,10 @@ import { replaceState, gaEvent } from "../modules/tracking";
 export default {
   name: "sc-sidenav",
   methods: {
-    changeFilter: function(filter) {
+    changeFilter: function (filter) {
       this.privateState.filterVal = filter;
     },
-    hideOverlay: function() {
+    hideOverlay: function () {
       // hide floating sidebar on metric change
       let drawer = document.querySelector(".mdl-layout__drawer");
       if (drawer) {
@@ -42,7 +55,7 @@ export default {
           .classList.remove("is-visible");
       }
     },
-    changeMetric: function(metric) {
+    changeMetric: function (metric) {
       this.hideOverlay();
       if (this.sharedState.metricId !== metric) {
         replaceState(metric, this.sharedState.selected);
@@ -54,7 +67,7 @@ export default {
         fetchData(this.sharedState, metric);
       }
     },
-    filterCategories: function(value) {
+    filterCategories: function (value) {
       let categories = [];
       for (let key in value) {
         if (categories.indexOf(value[key].category) === -1) {
@@ -63,7 +76,7 @@ export default {
       }
       return categories;
     },
-    filterMetrics: function(value, filter) {
+    filterMetrics: function (value, filter) {
       let metrics = [];
       for (let key in value) {
         if (value[key].category === filter) {
