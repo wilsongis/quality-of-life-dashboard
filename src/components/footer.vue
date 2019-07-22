@@ -9,7 +9,7 @@
             </p>
             
             <p class="text-muted">
-                Used by the  <a href="http://apsugis.org">APSU GIS Center</a>, based on the work of <a href="http://charmeck.org/mecklenburg/county/Pages/Default.aspx">Mecklenburg County</a>, the <a href=" http://www.apsugis.org/census-viewer/">City of Charlotte</a>, and <a href="http://www.uncc.edu/">UNC Charlotte</a>
+                Used by the  <a href="http://apsugis.org">APSU GIS Center</a>, based on the work of <a href="http://charmeck.org/mecklenburg/county/Pages/Default.aspx">Mecklenburg County</a>, the <a href="http://charmeck.org/city/charlotte/Pages/default.aspx">City of Charlotte</a>, and <a href="http://www.uncc.edu/">UNC Charlotte</a>
                 with much &#9829; for the projects that make this site possible:
                 <br>
                 <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>,
@@ -27,30 +27,31 @@
 import Social from './social.vue';
 
 export default {
-  name: 'sc-footer',
-  components: {
-    social: Social
-  },
-  methods: {
-    social: function (socialType) {
-      let _this = this;
-      let pageUrl = encodeURIComponent(document.URL);
-      if (socialType === 'twitter') {
-        let socialUrl = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${encodeURIComponent(_this.sharedState.metric.config.title)}`;
-        window.open(socialUrl, "Share");
-      }
-      if (socialType === 'facebook') {
-        let socialUrl = `https://www.facebook.com/sharer.php?u=${pageUrl}`;
-        window.open(socialUrl, "Share");
-      }
-      if (socialType === 'linkedin') {
-        let socialUrl = `https://www.linkedin.com/shareArticle?url=${pageUrl}`;
-        window.open(socialUrl, "Share");
-      }
+    name: 'sc-footer',
+    components: {
+        social: Social
+    },
+    methods: {
+        social: function (socialType) {
+            let _this = this;
+            let pageUrl = encodeURIComponent(document.URL);
+            if (socialType === 'twitter') {
+                let socialUrl = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${encodeURIComponent(_this.sharedState.metric.config.title)}`;
+                window.open(socialUrl, "Share");
+            }
+            if (socialType === 'facebook') {
+                let socialUrl = `https://www.facebook.com/sharer.php?u=${pageUrl}`;
+                window.open(socialUrl, "Share");
+            }
+            if (socialType === 'linkedin') {
+                let socialUrl = `https://www.linkedin.com/shareArticle?url=${pageUrl}`;
+                window.open(socialUrl, "Share");
+            }
+        }
     }
-  }
 }
 </script>
 
 <style lang="css" scoped>
+
 </style>
